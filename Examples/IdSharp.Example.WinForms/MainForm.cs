@@ -175,7 +175,7 @@ namespace IdSharp.Tagging.Harness.WinForms
             if (!InvokeRequired)
                 btnScan.Enabled = true;
             else
-                Invoke(new MethodInvoker(EnableCancelButton));
+                Invoke(new System.Windows.Forms.MethodInvoker(EnableCancelButton));
         }
 
         private delegate void UpdateProgressDelegate(int progressValue);

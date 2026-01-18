@@ -1,4 +1,7 @@
 using System;
+// TODO: Replace WebRequest/HttpWebRequest with HttpClient in a future update
+// Suppressing obsolete warning as the APIs still function in .NET 10
+#pragma warning disable SYSLIB0014
 using System.Collections.Generic;
 using System.IO;
 using System.Net;

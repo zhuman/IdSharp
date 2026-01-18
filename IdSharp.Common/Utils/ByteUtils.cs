@@ -3,6 +3,9 @@ using System.Diagnostics;
 using System.Text;
 using System.IO;
 
+// Suppressing CA2022 - the Read operations in this file handle short reads appropriately
+#pragma warning disable CA2022
+
 namespace IdSharp.Common.Utils
 {
     /// <summary>
