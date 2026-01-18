@@ -1,0 +1,58 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Examples/">
+    <Project Path="Examples/IdSharp.Example.Console.TagConverter/IdSharp.Example.Console.TagConverter.csproj">
+      <Platform Solution="*|Any CPU" Project="x86" />
+      <Platform Solution="*|ARM64" Project="ARM64" />
+      <Platform Solution="*|x86" Project="x86" />
+      <Platform Solution="*|x64" Project="x64" />
+    </Project>
+    <Project Path="Examples/IdSharp.Example.ConsoleApplication/IdSharp.Example.ConsoleApplication.csproj">
+      <Platform Solution="*|Any CPU" Project="x86" />
+      <Platform Solution="*|ARM64" Project="ARM64" />
+      <Platform Solution="*|x64" Project="x64" />
+      <Platform Solution="*|x86" Project="x86" />
+    </Project>
+    <Project Path="Examples/IdSharp.Example.WinForms/IdSharp.Example.WinForms.csproj">
+      <Platform Solution="*|ARM64" Project="ARM64" />
+      <Platform Solution="*|x64" Project="x64" />
+    </Project>
+    <Project Path="Examples/IdSharp.Example.Wpf/IdSharp.Example.Wpf.csproj">
+      <Platform Solution="*|Any CPU" Project="x86" />
+      <Platform Solution="*|ARM64" Project="ARM64" />
+      <Platform Solution="*|x64" Project="x64" />
+      <Platform Solution="*|x86" Project="x86" />
+    </Project>
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/IdSharp.Common.Tests/IdSharp.Common.Tests.csproj">
+      <Platform Solution="*|ARM64" Project="ARM64" />
+      <Platform Solution="*|x64" Project="x64" />
+    </Project>
+    <Project Path="Tests/IdSharp.Tagging.Tests/IdSharp.Tagging.Tests.csproj">
+      <Platform Solution="*|ARM64" Project="ARM64" />
+      <Platform Solution="*|x64" Project="x64" />
+    </Project>
+  </Folder>
+  <Project Path="IdSharp.AudioInfo/IdSharp.AudioInfo.csproj">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="IdSharp.Common/IdSharp.Common.csproj">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="IdSharp.Tagging/IdSharp.Tagging.csproj">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="IdSharp.WebLookup/IdSharp.WebLookup.csproj">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+</Solution>
