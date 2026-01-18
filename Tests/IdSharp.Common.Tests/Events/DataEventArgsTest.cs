@@ -10,32 +10,32 @@ namespace IdSharp.Common.Tests.Events
         public void TestConstructorAndDataProperty_Null()
         {
             DataEventArgs<string> dea = new DataEventArgs<string>(null);
-            Assert.IsNull(dea.Data);
+            Assert.That(dea.Data, Is.Null);
         }
 
         [Test]
         public void TestConstructorAndDataProperty_NotNull()
         {
             DataEventArgs<int> dea = new DataEventArgs<int>(42);
-            Assert.AreEqual(42, dea.Data);
+            Assert.That(dea.Data, Is.EqualTo(42));
         }
 
         [Test]
         public void TestSetData_Null()
         {
             var dea = new DataEventArgs<string>("Hello");
-            Assert.AreEqual("Hello", dea.Data);
+            Assert.That(dea.Data, Is.EqualTo("Hello"));
             dea.Data = null;
-            Assert.IsNull(dea.Data);
+            Assert.That(dea.Data, Is.Null);
         }
 
         [Test]
         public void TestSetData_NotNull()
         {
             var dea = new DataEventArgs<string>("Hello");
-            Assert.AreEqual("Hello", dea.Data);
+            Assert.That(dea.Data, Is.EqualTo("Hello"));
             dea.Data = "World";
-            Assert.AreEqual("World", dea.Data);
+            Assert.That(dea.Data, Is.EqualTo("World"));
         }
     }
 }

@@ -87,11 +87,11 @@ namespace IdSharp.Tagging.Tests
             byte[] data2 = frame.GetBytes(tagVersion);
             int offset = (tagVersion == ID3v2TagVersion.ID3v22 ? 6 : 10);
 
-            Assert.AreEqual(data.Length, data2.Length - offset, "Frame sizes are different");
+            Assert.That(data2.Length - offset, Is.EqualTo(data.Length), "Frame sizes are different");
 
             for (int i = 0; i < data.Length; i++)
             {
-                Assert.AreEqual(data[i], data2[i + offset], string.Format("Byte offset {0}", i + offset));
+                Assert.That(data2[i + offset], Is.EqualTo(data[i]), string.Format("Byte offset {0}", i + offset));
             }
         }
 

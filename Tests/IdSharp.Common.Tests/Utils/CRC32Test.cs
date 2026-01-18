@@ -25,7 +25,7 @@ namespace IdSharp.Common.Tests.Utils
         public void Calculate_Set1_ByteArray()
         {
             string result = CRC32.Calculate(_testByteArray_1);
-            Assert.AreEqual(_crc32StringResult_1, result);
+            Assert.That(result, Is.EqualTo(_crc32StringResult_1));
         }
 
         [Test]
@@ -34,7 +34,7 @@ namespace IdSharp.Common.Tests.Utils
             using (Stream stream = new MemoryStream(_testByteArray_1))
             {
                 string result = CRC32.Calculate(stream);
-                Assert.AreEqual(_crc32StringResult_1, result);
+                Assert.That(result, Is.EqualTo(_crc32StringResult_1));
             }
         }
 
@@ -46,7 +46,7 @@ namespace IdSharp.Common.Tests.Utils
             try
             {
                 string result = CRC32.Calculate(new FileInfo(path));
-                Assert.AreEqual(_crc32StringResult_1, result);
+                Assert.That(result, Is.EqualTo(_crc32StringResult_1));
             }
             finally
             {
@@ -58,7 +58,7 @@ namespace IdSharp.Common.Tests.Utils
         public void CalculateInt32_Set1_ByteArray()
         {
             uint result = CRC32.CalculateInt32(_testByteArray_1);
-            Assert.AreEqual(_crc32Result_1, result);
+            Assert.That(result, Is.EqualTo(_crc32Result_1));
         }
 
         [Test]
@@ -67,7 +67,7 @@ namespace IdSharp.Common.Tests.Utils
             using (Stream stream = new MemoryStream(_testByteArray_1))
             {
                 uint result = CRC32.CalculateInt32(stream);
-                Assert.AreEqual(_crc32Result_1, result);
+                Assert.That(result, Is.EqualTo(_crc32Result_1));
             }
         }
 
@@ -79,7 +79,7 @@ namespace IdSharp.Common.Tests.Utils
             try
             {
                 uint result = CRC32.CalculateInt32(new FileInfo(path));
-                Assert.AreEqual(_crc32Result_1, result);
+                Assert.That(result, Is.EqualTo(_crc32Result_1));
             }
             finally
             {
@@ -91,7 +91,7 @@ namespace IdSharp.Common.Tests.Utils
         public void Calculate_Set2_ByteArray()
         {
             string result = CRC32.Calculate(_testByteArray_2);
-            Assert.AreEqual(_crc32StringResult_2, result);
+            Assert.That(result, Is.EqualTo(_crc32StringResult_2));
         }
 
         [Test]
@@ -100,7 +100,7 @@ namespace IdSharp.Common.Tests.Utils
             using (Stream stream = new MemoryStream(_testByteArray_2))
             {
                 string result = CRC32.Calculate(stream);
-                Assert.AreEqual(_crc32StringResult_2, result);
+                Assert.That(result, Is.EqualTo(_crc32StringResult_2));
             }
         }
 
@@ -112,7 +112,7 @@ namespace IdSharp.Common.Tests.Utils
             try
             {
                 string result = CRC32.Calculate(new FileInfo(path));
-                Assert.AreEqual(_crc32StringResult_2, result);
+                Assert.That(result, Is.EqualTo(_crc32StringResult_2));
             }
             finally
             {
@@ -124,7 +124,7 @@ namespace IdSharp.Common.Tests.Utils
         public void CalculateInt32_Set2_ByteArray()
         {
             uint result = CRC32.CalculateInt32(_testByteArray_2);
-            Assert.AreEqual(_crc32Result_2, result);
+            Assert.That(result, Is.EqualTo(_crc32Result_2));
         }
 
         [Test]
@@ -133,7 +133,7 @@ namespace IdSharp.Common.Tests.Utils
             using (Stream stream = new MemoryStream(_testByteArray_2))
             {
                 uint result = CRC32.CalculateInt32(stream);
-                Assert.AreEqual(_crc32Result_2, result);
+                Assert.That(result, Is.EqualTo(_crc32Result_2));
             }
         }
 
@@ -145,7 +145,7 @@ namespace IdSharp.Common.Tests.Utils
             try
             {
                 uint result = CRC32.CalculateInt32(new FileInfo(path));
-                Assert.AreEqual(_crc32Result_2, result);
+                Assert.That(result, Is.EqualTo(_crc32Result_2));
             }
             finally
             {

@@ -16,7 +16,7 @@ namespace IdSharp.Common.Tests.Events
         {
             const int value = 5;
             var x = Get(value);
-            Assert.AreEqual(value, x.Data);
+            Assert.That(value, Is.EqualTo(x.Data));
         }
 
         [Test]
@@ -24,7 +24,7 @@ namespace IdSharp.Common.Tests.Events
         {
             const int value = 5;
             var x = Get(value);
-            Assert.AreEqual(false, x.Cancel);
+            Assert.That(x.Cancel, Is.False);
         }
 
         [Test]
@@ -33,7 +33,7 @@ namespace IdSharp.Common.Tests.Events
             const int value = 5;
             var x = Get(value);
             x.Cancel = true;
-            Assert.AreEqual(true, x.Cancel);
+            Assert.That(x.Cancel, Is.True);
         }
 
         [Test]
@@ -41,7 +41,7 @@ namespace IdSharp.Common.Tests.Events
         {
             const int value = 5;
             var x = Get(value);
-            Assert.AreEqual(null, x.CancelReason);
+            Assert.That(x.CancelReason, Is.Null);
         }
 
         [Test]
@@ -51,7 +51,7 @@ namespace IdSharp.Common.Tests.Events
             const string msg = "hello";
             var x = Get(value);
             x.CancelReason = msg;
-            Assert.AreEqual(msg, x.CancelReason);
+            Assert.That(x.CancelReason, Is.EqualTo(msg));
         }
     }
 }
